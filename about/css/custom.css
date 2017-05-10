@@ -2,6 +2,10 @@ body {
 	font-family: Lato;
 }
 
+.navbar-default .navbar-brand {
+	text-transform: none;
+}
+
 #profile .portrait-title h3 {
 	color: #888;
 }
