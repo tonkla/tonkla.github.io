@@ -1,0 +1,23 @@
+body {
+	font-family: Lato;
+}
+
+#profile .portrait-title h3 {
+	color: #888;
+}
+
+.home-section {
+	padding: 50px 0;
+}
+
+#experience h2,
+#playground h2,
+#gallery h2 {
+	font-size: 1.8em;
+}
+
+#experience p,
+#playground p,
+#gallery p {
+	margin-top: 2em;
+}
