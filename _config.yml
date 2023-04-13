@@ -1,0 +1,17 @@
+title: "UnTIL the Stars Align"
+tagline: "⭐ Today I Learned"
+description: ""
+url:
+baseurl:
+paginate: 10
+permalink: pretty
+github:
+  repo: https://github.com/tonkla
+
+# Gems
+plugins:
+  - jekyll-paginate
+
+# Custom vars
+version: 1.1.0
+google_analytics_id:
