@@ -7,7 +7,7 @@ I was trying to extract data from some web pages using a tool called [Puppeteer]
 
 Today, I realized that I needed to find the root cause of the problem. I had an idea to capture a screenshot of the page to see how it was being rendered. When I did this, I noticed that the output image was too small. I realized that the default size used by Puppeteer was too small.
 
-I eventually figured out that the problem was caused by the fact that the page was a lazy loaded component. This means that the data is only fetched when the component is shown on the screen. To fix this, I increased the initial screen size by adding the following parameters:
+I eventually figured out that the problem was caused by the fact that the page was a lazy loaded component. This means that the data is only fetched when the component is shown on the screen (see [Intersection Observer API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API)). To fix this, I increased the initial screen size by adding the following parameters:
 
 ```javascript
 const browser = await puppeteer.launch({
