@@ -39,8 +39,9 @@ body {
 }
 
 html {
-  font-family: "IBM Plex Sans Thai Looped", sans-serif;
+  font-family: "Lexend Deca", sans-serif;
   font-size: 20px;
+  font-weight: 300;
   line-height: 1.6;
 }
 
@@ -53,6 +54,10 @@ h6 {
   font-weight: 400;
   color: #313131;
   letter-spacing: -0.025rem;
+}
+
+strong {
+  font-weight: 500;
 }
 
 /*
@@ -101,9 +106,13 @@ h6 {
   border-bottom: 1px solid #d6d3d1;
 }
 .masthead-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   margin-top: 0;
   margin-bottom: 0;
   color: #505050;
+  text-align: center;
 }
 .masthead-title a {
   color: #0f766e;
@@ -116,6 +125,7 @@ h6 {
 
 @media (max-width: 48em) {
   .masthead-title {
+    justify-content: center;
     text-align: center;
   }
   .masthead-title small {
@@ -333,16 +343,20 @@ a.sidebar-nav-item:focus {
 
 /* Related posts */
 .related {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
   border-top: 1px solid #d6d3d1;
+}
+.related h2 {
+  font-size: 1.2rem;
 }
 .related-posts {
   padding-left: 0;
   list-style: none;
 }
 .related-posts h3 {
-  font-size: 1.1rem;
+  font-size: 1rem;
+  font-weight: 400;
   margin-top: 0;
 }
 .related-posts li small {
@@ -564,4 +578,54 @@ a.pagination-item:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/* Floating Back Button */
+.back-button {
+  position: fixed;
+  top: 50%;
+  left: 2rem;
+  transform: translateY(-50%);
+  padding: 0.6rem 1.2rem;
+  background-color: #0f766e;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  z-index: 999;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  line-height: 1;
+}
+
+.back-button:hover {
+  background-color: #115e59;
+  transform: translateY(-50%) scale(1.05);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.back-button:active {
+  transform: translateY(-50%) scale(1);
+}
+
+.back-icon {
+  font-size: 1.2rem;
+  margin-top: -0.2rem; /* Fine-tune vertical offset for the icon */
+}
+
+.back-text {
+  line-height: 1;
+}
+
+@media (max-width: 48em) {
+  .back-button {
+    display: none;
+  }
 }
